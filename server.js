@@ -38,7 +38,7 @@ io.on('connection', function (socket) {
         }
         console.log(Rooms);
 
-        if(Rooms[token].length > 6){
+        if(Rooms[token].length > 4){
                 io.to(socket.id).emit("user-exceeded")
         }else{
             Rooms[token].forEach(function(SocketId){
